@@ -1,6 +1,7 @@
 ![alt text](https://i.imgur.com/FkYwWdp.png)
 # Magnolia ![License: MIT](https://img.shields.io/badge/license-MIT%20-blue?style=flat&logo=none)
 
+**What's Magnolia?**
 **How to setup Magnolia**
 
 Make a codespace and open its terminal and run
