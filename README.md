@@ -12,4 +12,4 @@ pip install Flask Flask-SQLAlchemy Werkzeug
 python app.py
 ```
 Then, click "Open in Browser" on the notification that says "Your application running on port 5000 is available."
-![alt text](https://i.imgur.com/FkYwWdpl.png)
+![alt text](https://i.imgur.com/FkYwWdp.png)
