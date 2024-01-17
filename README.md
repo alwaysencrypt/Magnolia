@@ -3,7 +3,7 @@
 
 **How to setup Magnolia**
 
-Make a codespace and open the terminal and run
+Make a codespace and open its terminal and run
 
 ```
 git clone https://github.com/vlothedev/Magnolia.git
