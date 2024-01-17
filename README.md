@@ -1,5 +1,5 @@
 ![alt text](https://i.imgur.com/FkYwWdp.png)
-# H1 Magnolia
+# Magnolia
 
 **How to setup Magnolia**
 
