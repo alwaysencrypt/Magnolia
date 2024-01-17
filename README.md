@@ -4,6 +4,7 @@
 **What's Magnolia?**
 Magnolia is a simple tool that turns a Github Codespace into a web based cloud storage utility. How does it work? Magnolia works by hosting a website on a part of the codespace that allows you to interact with the files you host to the server.
 
+
 **How to setup Magnolia**
 
 Make a codespace and open its terminal and run
