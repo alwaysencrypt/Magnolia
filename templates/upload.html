@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Storage</title>
+    <style>
+        body {
+            background-color: #282a36;
+            color: #bd93f9;
+            font-family: 'Courier New', monospace;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        h2 {
+            color: #8be9fd; /* Light blue color */
+            margin-bottom: 20px;
+        }
+
+        form {
+            margin-bottom: 20px;
+        }
+
+        #fileInputContainer {
+            position: relative;
+            overflow: hidden;
+            display: inline-block;
+        }
+
+        input[type="file"] {
+            font-size: 100px;
+            position: absolute;
+            left: 0;
+            top: 0;
+            opacity: 0;
+            cursor: pointer;
+        }
+
+        #customFileButton {
+            background-color: #44475a;
+            color: #f8f8f2;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-right: 5px;
+        }
+
+        input[type="submit"] {
+            background-color: #bd93f9;
+            color: #282a36;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            background-color: #44475a;
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 5px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 400px; /* Adjust width as needed */
+        }
+
+        a {
+            color: #bd93f9;
+            text-decoration: none;
+            margin-right: 10px;
+        }
+
+        form[style="display:inline;"] {
+            margin: 0;
+        }
+
+        input[type="submit"][value="Delete"] {
+            background-color: #ff5555;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Upload Files</h2>
+<form action="/" method="post" enctype="multipart/form-data">
+  <div id="fileInputContainer">
+    <label id="customFileButton" for="fileToUpload">Choose File</label>
+    <input type="file" name="fileToUpload" id="fileToUpload" multiple>
+  </div>
+  <input type="submit" value="Upload Files" name="submit">
+</form>
+
+<h2>Uploaded Files</h2>
+<ul id="fileList">
+  {% for file in uploaded_files %}
+    <li>
+      {{ file.filename }}
+      <a href="{{ url_for('download_file', file_id=file.id) }}">Download {{ file.filename }}</a>
+      <form method="post" action="{{ url_for('delete_file', file_id=file.id) }}" style="display: inline;">
+        <input type="submit" value="Delete">
+      </form>
+    </li>
+  {% endfor %}
+</ul>
+
+</body>
+</html>

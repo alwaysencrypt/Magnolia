@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Upload</title>
+    <style>
+        body {
+            background-color: #282a36;
+            color: #f8f8f2;
+            font-family: 'Courier New', monospace;
+        }
+
+        h2 {
+            color: #50fa7b;
+        }
+
+        form {
+            margin-bottom: 20px;
+        }
+
+        input[type="file"] {
+            background-color: #44475a;
+            color: #f8f8f2;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        input[type="submit"] {
+            background-color: #bd93f9;
+            color: #282a36;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            background-color: #44475a;
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 5px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        a {
+            color: #6272a4;
+            text-decoration: none;
+            margin-right: 10px;
+        }
+
+        form[style="display:inline;"] {
+            margin: 0;
+        }
+
+        input[type="submit"][value="Delete"] {
+            background-color: #ff5555;
+        }
+    </style>
+</head>
+<body>
+
+<h2>File Upload</h2>
+<form action="/" method="post" enctype="multipart/form-data">
+  Select files to upload:
+  <input type="file" name="fileToUpload" id="fileToUpload" multiple>
+  <input type="submit" value="Upload Files" name="submit">
+</form>
+
+<h2>Uploaded Files</h2>
+<ul id="fileList">
+  {% for file in uploaded_files %}
+    <li>
+      {{ file.filename }}
+      <a href="{{ url_for('download_file', file_id=file.id) }}">Download {{ file.filename }}</a>
+      <form method="post" action="{{ url_for('delete_file', file_id=file.id) }}" style="display: inline;">
+        <input type="submit" value="Delete">
+      </form>
+    </li>
+  {% endfor %}
+</ul>
+
+</body>
+</html>
