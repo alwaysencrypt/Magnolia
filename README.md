@@ -17,4 +17,4 @@ python app.py
 ```
 Then, click "Open in Browser" on the notification that says "Your application running on port 5000 is available."
 
-Here's a screenshot of Magnolia running in a browser https://imgur.com/wU5G4oR.png.
+**Demo https://i.imgur.com/wU5G4oR.png**
