@@ -1,6 +1,5 @@
-![alt text](https://i.imgur.com/FkYwWdp.png)![License: MIT](https://img.shields.io/badge/license-MIT%20-blue?style=flat&logo=none)
-
-# Magnolia
+![alt text](https://i.imgur.com/FkYwWdp.png)
+# Magnolia ![License: MIT](https://img.shields.io/badge/license-MIT%20-blue?style=flat&logo=none)
 
 **How to setup Magnolia**
 
