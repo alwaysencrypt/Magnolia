@@ -3,7 +3,7 @@
 
 **How to setup Magnolia**
 
-Make a codespace and open the terminal
+Make a codespace and open the terminal and run
 ``` git clone https://github.com/vlothedev/Magnolia.git
 cd Magnolia
 pip install Flask Flask-SQLAlchemy Werkzeug
