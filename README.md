@@ -18,3 +18,4 @@ python app.py
 Then, click "Open in Browser" on the notification that says "Your application running on port 5000 is available."
 
 **Demo https://i.imgur.com/wU5G4oR.png**
+(This project is kind of broken and may not be updated further)
