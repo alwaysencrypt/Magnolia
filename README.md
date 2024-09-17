@@ -2,7 +2,7 @@
 # Magnolia ![License: MIT](https://img.shields.io/badge/license-MIT%20-blue?style=flat&logo=none)
 
 **What's Magnolia?**
-Magnolia is a simple tool that turns a Github Codespace into a web based cloud storage utility. How does it work? Magnolia works by hosting a website on the codespace that allows you to interact with the files you host to the server.
+Magnolia is a simple tool that turns a Github Codespace into a web based cloud storage utility. **How does it work?** Magnolia works by hosting a website on the codespace that allows you to interact with the files you host to the server.
 
 
 **How to setup Magnolia**
